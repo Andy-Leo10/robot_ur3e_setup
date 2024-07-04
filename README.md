@@ -1,5 +1,9 @@
 # robot_ur3e_setup
 
+```
+git clone https://github.com/Andy-Leo10/robot_ur3e_setup.git
+```
+
 - [robot\_ur3e\_setup](#robot_ur3e_setup)
   - [Start Moveit in Simulation](#start-moveit-in-simulation)
     - [Separating move group and rviz](#separating-move-group-and-rviz)
@@ -7,6 +11,11 @@
     - [Separating move group and rviz](#separating-move-group-and-rviz-1)
   - [Other configurations for the arm](#other-configurations-for-the-arm)
   - [Resources](#resources)
+
+---
+
+<details>
+<summary><b>SIMULATED ROBOT</b></summary>
 
 ## Start Moveit in Simulation
 ```
@@ -22,6 +31,14 @@ ros2 launch sim_moveit_config move_group.launch.py
 cd ~/ros2_ws/ ;source install/setup.bash
 ros2 launch sim_moveit_config moveit_rviz.launch.py
 ```
+
+</details>
+
+---
+
+<details>
+<summary><b>REAL ROBOT</b></summary>
+
 ## Start Moveit in Real Robot
 ```
 cd ~/ros2_ws/ ;colcon build --packages-select real_moveit_config;source install/setup.bash
@@ -37,6 +54,13 @@ cd ~/ros2_ws/ ;source install/setup.bash
 ros2 launch real_moveit_config moveit_rviz.launch.py
 ```
 
+</details>
+
+---
+
+<details>
+<summary><b>More info</b></summary>
+
 ## Other configurations for the arm
 ![alt text](assets/kinematic_solver.png)
 ![alt text](assets/planner.png)
@@ -44,9 +68,20 @@ ros2 launch real_moveit_config moveit_rviz.launch.py
 ros2 launch moveit_setup_assistant setup_assistant.launch.py
 ```
 
+</details>
+
+---
+
+<details>
+<summary><b>Resources</b></summary>
+
 ## Resources
 Orientation Constraint (doesn't work):
 - https://moveit.picknik.ai/main/doc/how_to_guides/using_ompl_constrained_planning/ompl_constrained_planning.html
 - https://docs.picknik.ai/en/4.0.1/how_to/application_how_tos/orientation_constrained_planning/orientation_constrained_planning.html
 
 ![alt text](assets/sizes.jpg)
+
+</details>
+
+---
